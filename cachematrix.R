@@ -1,4 +1,5 @@
 # inverse of a matrix using solve()
+# The following code is used to create a special matrix that stores a matrix and caches its inverse.
 
 makematrixinv <- function(x = numeric()) {
     m <- NULL
@@ -13,6 +14,9 @@ makematrixinv <- function(x = numeric()) {
          setmatrixinv = setmatrixinv,
          getmatrixinv = getmatrixinv)
 }
+
+# If X is a square invertible matrix, then the solve(x) function should return its inverse.
+# If the inverse has already been calculated, then the CacheSolve function should retrieve the inverse from the cache.
 
 cachematrixinv <- function(x, ...){
     m <- x$getmatrixinv()
